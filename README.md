@@ -1,4 +1,4 @@
-# _template repo_
+# _Stock Market_
 
 #### By _**Noah Atkinson**_
 

@@ -7,7 +7,8 @@
     "build": "webpack --mode=development",
     "start": "npm run build && webpack-dev-server --open --mode=development",
     "lint": "eslint src/*.js",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "generate-doc": "npm run generate-doc"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +28,7 @@
     "webpack-dev-server": "3.11.3"
   },
   "dependencies": {
+    "@polygon.io/client-js": "^7.0.1",
     "bootstrap": "^5.2.3"
   }
 }
