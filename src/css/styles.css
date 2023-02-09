@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: lightblue;
+  background-color: rgb(168, 194, 203);
 }
 
 a {
@@ -10,12 +10,55 @@ a {
   
 }
 
+.container-intro { 
+  grid-area : header;
+  color: white;
+  font-size: xx-large;
+  background-color: black;
+  animation: color-change 1s infinite;
+}
+
+@keyframes color-change {
+  0% { color: white; }
+  25% { color: green; }
+  50% { color: yellow; }
+  75% { color: red; }
+  100% { color: violet; }
+}
+/* 
+p {
+  animation: color-change 1s infinite;
+}
+
+@keyframes color-change {
+  0% { color: red; }
+  50% { color: blue; }
+  100% { color: red; }
+} */
+
+.container-left { 
+  grid-area : left; }
+
+.container-form { 
+  grid-area : form; }
+  
+.container-right { 
+  grid-area : right; }
+
+
+
 .container{
   display: grid;
   grid-template-areas: 
   'header header header header header header'
-  'left'
-  ;
+  'left left form form right right';
+  gap: 10px;
+  padding: 10px;
+}
+
+.container > div {
+  text-align: center;
+  padding: 20px;
 }
 
 #results {
@@ -32,7 +75,7 @@ a {
   white-space: nowrap;
   overflow: hidden;
   box-sizing: border-box;
-  animation: marquee 50s linear infinite;
+  animation: marquee 50s  infinite;
 }
 
 #news-headline:hover {
