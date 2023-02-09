@@ -1,25 +1,21 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import { getNews, showStock, getGifs } from './business.js';
-// UI Logic 
+// import { getNews, showStock, getGifs } from './business.js';
+import getAPIData from './business.js';
+
 
 export function printGifs(response) {
-  /* eslint-disable no-console */
   document.querySelector('div.container-left').innerHTML = null;
   document.querySelector('div.container-right').innerHTML = null;
-  console.log(response);
   let left = response.data[0].images.fixed_height.url;
-  console.log(left);
   let right = response.data[1].images.fixed_height.url;
-  console.log(right);
   let img1 = document.createElement('img');
   let img2 = document.createElement('img');
   img1.setAttribute('src', left);
   img2.setAttribute('src', right);
   document.querySelector('div.container-left').append(img1);
   document.querySelector('div.container-right').append(img2);
-  /* eslint-enable no-console */
 }
 
 export function printNews(apiResponse, ticker) {
@@ -45,22 +41,25 @@ export function printStocks(response, ticker) {
   document.querySelector('#results').innerText = results;
 }
 
-export function printError(error, ticker) {
-  if (error.queryCount === 0) {
-    document.querySelector("#results").innerText = `There was an error accessing the stock data for ${ticker}:
-    ticker "${ticker}" does not exist`;
-  } else
-    document.querySelector("#results").innerText = `There was an error acceessing the stock data for ${ticker}: 
-    ${error}`;
+export function printError(error) {
+    document.querySelector('#results').innerText = error;
 }
+//   if (error.queryCount === 0) {
+//     document.querySelector("#results").innerText = `There was an error accessing the stock data for ${ticker}:
+//     ticker "${ticker}" does not exist`;
+//   } else
+//     document.querySelector("#results").innerText = `There was an error acceessing the stock data for ${ticker}: 
+//     ${error}`;
+// }
 
 function handleFormSubmission(event) {
   event.preventDefault();
   const ticker = document.querySelector('#ticker-input').value.toUpperCase();
   document.querySelector('#ticker-input').value = null;
-  showStock(ticker);
-  getNews(ticker);
-  getGifs(ticker);
+  getAPIData(ticker);
+  // showStock(ticker);
+  // getNews(ticker);
+  // getGifs(ticker);
 }
 
 window.addEventListener("load", function() {

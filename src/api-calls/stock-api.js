@@ -10,6 +10,10 @@ export default class StockInfo {
       if (!response.ok) {
         const errorMessage = `${response.status} ${response.statusText} ${jsonifiedResponse.message}`;
         throw new Error(errorMessage);
+      } else if (jsonifiedResponse.queryCount === 0) {
+        const errorMessage = `There was an error accesing the stock ticker:
+        "${ticker}" does not exist`;
+        throw new Error(errorMessage);
       }
       return jsonifiedResponse;
     } catch(error) {

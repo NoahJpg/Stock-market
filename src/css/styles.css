@@ -10,6 +10,10 @@ a {
   
 }
 
+.invisible {
+  color: black;
+}
+
 .container-intro { 
   grid-area : header;
   color: white;
@@ -25,16 +29,6 @@ a {
   75% { color: red; }
   100% { color: violet; }
 }
-/* 
-p {
-  animation: color-change 1s infinite;
-}
-
-@keyframes color-change {
-  0% { color: red; }
-  50% { color: blue; }
-  100% { color: red; }
-} */
 
 .container-left { 
   grid-area : left; }
@@ -75,7 +69,8 @@ p {
   white-space: nowrap;
   overflow: hidden;
   box-sizing: border-box;
-  animation: marquee 20s linear infinite;
+  animation: marquee 30s linear infinite;
+  
 }
 
 #news-headline:hover {
@@ -93,7 +88,7 @@ footer {
 
 @keyframes marquee {
   0% {
-    transform: translateX(100%);
+    transform: translateX(60%);
   }
   100% {
     transform: translateX(-100%);
