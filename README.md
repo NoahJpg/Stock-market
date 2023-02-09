@@ -2,7 +2,7 @@
 
 #### By _**Noah Atkinson, Kai Clausen & Jacob Maier**_
 
-#### _brief description_
+#### _A web app that shows users basic infomation on the stock ticker they input, and shows relevant articles at bottom of page_
 
 https:// link
 
