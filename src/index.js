@@ -7,7 +7,7 @@ import NewsInfo from './news-info.js';
 //Business Logic
 async function getNews(ticker) {
   const response = await NewsInfo.getNews(ticker);
-  printNews(response);
+  printNews(response, ticker);
 }
 //   if(response.main) {
 //     printNews(response);
@@ -31,24 +31,18 @@ async function showStock(ticker) {
 
 // UI Logic 
 
-// function printElements(apiResponse, search) {
-//   document.querySelector('#results').innerText = `Here are the gifs matching your search: ${search}:`;
-//   apiResponse.data.forEach(function(element){
-//     let newUrl = element.images.fixed_height.url;
-//     let img = document.createElement('img');
-//     img.setAttribute('src', newUrl);
-//     document.querySelector('#results-img').append(img);
-//   });
-// }
-function printNews(response) {
-  response.data.forEach(function(article) {
+function printNews(apiResponse, ticker) {
+
+  document.querySelector('#news-headline').innerText = (`${ticker}: `);
+  apiResponse.data.forEach(function(article){
     let newsUrl = article.url;
     let title = article.title;
     let aElement = document.createElement('a');
-    aElement.setAttribute('src', newsUrl);
-    aElement.innerText = title;
-    document.querySelector('#news-headline').append(`${aElement} || `);
-  });  
+    aElement.setAttribute('href', newsUrl);
+    aElement.append(title);
+    document.getElementById('news-headline').append(aElement);
+    document.querySelector('#news-headline').append('   ||   ');
+  })
 }
 
 function printStocks(response, ticker) {
@@ -64,10 +58,10 @@ function printStocks(response, ticker) {
 
 function printError(error, ticker) {
   if (error.queryCount === 0) {
-    document.getElementById("results").innerText = `There was an error accessing the stock data for ${ticker}:
+    document.querySelector("#results").innerText = `There was an error accessing the stock data for ${ticker}:
     ticker "${ticker}" does not exist`;
   } else
-    document.getElementById("results").innerText = `There was an error acceessing the stock data for ${ticker}: 
+    document.querySelector("#results").innerText = `There was an error acceessing the stock data for ${ticker}: 
     ${error}`;
 }
 
@@ -76,7 +70,7 @@ function handleFormSubmission(event) {
   const ticker = document.querySelector('#ticker-input').value.toUpperCase();
   document.querySelector('#ticker-input').value = null;
   showStock(ticker);
-  getNews();
+  getNews(ticker);
 }
 
 window.addEventListener("load", function() {

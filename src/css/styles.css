@@ -3,6 +3,13 @@ body {
   background-color: lightblue;
 }
 
+a {
+  text-decoration: none;
+  font-family: sans-serif;
+  color: white;
+  
+}
+
 #results {
   font-weight: 600;
   font-size: large;
@@ -12,12 +19,12 @@ body {
 }
 
 #news-headline {
-  width: 100%;
+  width: fit-content;
   margin: 0 auto;
   white-space: nowrap;
   overflow: hidden;
   box-sizing: border-box;
-  animation: marquee 15s linear infinite;
+  animation: marquee 50s linear infinite;
 }
 
 #news-headline:hover {
@@ -26,10 +33,11 @@ body {
 
 footer {
   font-size: xx-large;
-  background-color: grey;
+  background-color: rgb(0, 0, 0);
   position: fixed;
   bottom: 0;
   width: 100%;
+  color: gray;
 }
 
 @keyframes marquee {

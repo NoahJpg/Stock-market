@@ -7,7 +7,7 @@ export default class NewsInfo {
       console.log(response);
       console.log(jsonifiedResponse);
       /* eslint-enable no-console */
-      if (!response.ok) {
+      if (response.status !== 200) {
         const errorMessage = `${response.status} ${response.statusText} ${jsonifiedResponse.message}`;
         throw new Error(errorMessage);
       }
