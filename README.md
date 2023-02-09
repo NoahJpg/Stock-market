@@ -1,6 +1,6 @@
 # _Stock Market_
 
-#### By _**Noah Atkinson**_
+#### By _**Noah Atkinson, Kai Clausen & Jacob Maier**_
 
 #### _brief description_
 
@@ -24,11 +24,13 @@ _INSERT DESCRIPTION_
 
 ## Setup/Installation Requirements
 
-* _Install all packages with $ npm install._
-* _Build the project using webpack with $ npm run build_
-* _Start a development server with $ npm run start_
-* _Lint JS files in the src folder with $ npm run lint_
-* _Run tests with Jest using $ npm run test_ 
+* _Create an API key for Polygo.io at `https://polygon.io/`_
+* _Create an API key for MarketAux at `https://www.marketaux.com/`_
+* _Install all packages with `$ npm install.`_
+* _Build the project using webpack with $ `npm run build`_
+* _Start a development server with `$ npm run start`_
+* _Lint JS files in the src folder with `$ npm run lint`_
+* _Run tests with Jest using `$ npm run test`_ 
 
 
 ## Known Bugs
@@ -40,7 +42,7 @@ If you have any issues running this HTML site, then I have failed on a massive l
 
 ## MIT License
 
-Copyright (c) [2023] [Noah Atkinson]
+Copyright (c) [2023] [Noah Atkinson] [Kai Clausen] [Jacob Maier]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -1,8 +1,7 @@
-export default class StockInfo {
-  static async getStock(ticker) {
+export default class NewsInfo {
+  static async getNews(ticker) {
     try {
-      const response = await fetch(`https://api.polygon.io/v2/aggs/ticker/${ticker}/range/1/day/2023-01-09/2023-01-09?apiKey=${process.env.API_KEY}`);
-      // const response = await fetch(`https://api.polygon.io/v2/aggs/ticker/MSFT/range/1/day/2023-01-09/2023-01-09?apiKey=gkdxKUmiZMkZE6F37PmBahNgFTQ_4_2a`);
+      const response = await fetch(`https://api.marketaux.com/v1/news/all?symbols=${ticker}&language=en&filter_entities=true&api_token=${process.env.MARKETAUX_KEY}`);
       const jsonifiedResponse = await response.json();
       /* eslint-disable no-console */
       console.log(response);

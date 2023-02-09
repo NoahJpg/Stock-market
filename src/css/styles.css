@@ -1,3 +1,43 @@
 body {
+  text-align: center;
   background-color: lightblue;
 }
+
+#results {
+  font-weight: 600;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#news-headline {
+  width: 100%;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  animation: marquee 15s linear infinite;
+}
+
+#news-headline:hover {
+  animation-play-state: paused;
+}
+
+footer {
+  font-size: xx-large;
+  background-color: grey;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
