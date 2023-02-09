@@ -75,7 +75,7 @@ p {
   white-space: nowrap;
   overflow: hidden;
   box-sizing: border-box;
-  animation: marquee 50s  infinite;
+  animation: marquee 20s linear infinite;
 }
 
 #news-headline:hover {
