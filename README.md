@@ -4,7 +4,7 @@
 
 #### _A web app that shows users basic infomation on the stock ticker they input, and shows relevant articles at bottom of page_
 
-https:// link
+https://github.com/NoahJpg/Stock-market.git
 
 ## Technologies Used
 
@@ -17,18 +17,23 @@ https:// link
 * _eslint_
 * _Jest_
 * _Babel_
+* _MarketAux API_
+* _Polygon API_
 
 ## Description
 
-_INSERT DESCRIPTION_
+_Web App that accepts a ticker symbol from the user. It then returns the stock's open, close, high, low, and trade volume. It also returns 3 clickable articles in a marquee footer based on the stock they input_
 
 ## Setup/Installation Requirements
 
-* _Create an API key for Polygo.io at `https://polygon.io/`_
-* _Create an API key for MarketAux at `https://www.marketaux.com/`_
-* _Install all packages with `$ npm install.`_
+* _Clone this repository to your desktop._
+* _Navigate to the corresponding folder using your terminal._
+* _Enter the command `npm install` to install all necessary programs._
+* _Create an API key for Polygo.io at https://polygon.io/_
+* _Create an API key for MarketAux at https://www.marketaux.com/_
+* _You will need to set up a .env file to store your API key(s)._
 * _Build the project using webpack with $ `npm run build`_
-* _Start a development server with `$ npm run start`_
+* _Build the project and start a development server with `$ npm run start`_
 * _Lint JS files in the src folder with `$ npm run lint`_
 * _Run tests with Jest using `$ npm run test`_ 
 
@@ -38,26 +43,7 @@ _INSERT DESCRIPTION_
 * _There are no known bugs at this time_
 
 
-If you have any issues running this HTML site, then I have failed on a massive level. Please reach out to me at noahatkinson1.1@gmail.com or feel free to edit the code yourself if you feel so inclined.
+MIT - If you have any issues running this HTML site, then I have failed on a massive level. Please reach out to me at noahatkinson1.1@gmail.com or feel free to edit the code yourself if you feel so inclined.
 
-## MIT License
 
 Copyright (c) [2023] [Noah Atkinson] [Kai Clausen] [Jacob Maier]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
